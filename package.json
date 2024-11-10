@@ -1,0 +1,30 @@
+{
+  "name": "whatsapp_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc && npm run copyfiles",
+    "copyfiles": "copyfiles -u 2 \"src/shared/templates/**/*\" dist/shared/ && copyfiles -u 2 \"src/shared/*.xlsx\" dist/shared/",
+    "format": "prettier --write \"**/*.{ts,js,json}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "i": "^0.3.7",
+    "mongoose": "^8.8.1",
+    "whatnpm": "^1.0.0",
+    "whatsapp-web.js": "^1.16.4-alpha.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^22.9.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
